@@ -36,10 +36,10 @@ namespace BreadmakerReport
                 .ToList();
 
             Console.WriteLine("[#]  Reviews Average  Adjust    Description");
-            for (var j = 0; j < 3; j++)
+            for (var i = 0;  i< 3; i++)
             {
-                var i = BMList[j];
-                Console.WriteLine($"[{j + 1}]  {i.Reviews,7} {Math.Round(i.Average, 2),-7}  {Math.Round(i.Adjust, 2),-6}    {i.Description}");
+                var j = BMList[i];
+                Console.WriteLine( "[{0}] {1} {2} {3} {4}", i+1, j.TotalReviews, j.AverageReviews, j.AdjustReview, j.title);
             }
         }
     }
